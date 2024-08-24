@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: url('pictures/petss.avif') no-repeat center center fixed; /* Add your background image here */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-btn, .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  width: 410px;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.container .text {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff; /* Text color */
+}
+
+.container form {
+  margin-top: -20px;
+}
+
+.container form .data {
+  height: 45px;
+  width: 100%;
+  margin: 25px 0;
+}
+
+form .data label {
+  font-size: 18px;
+  color: #fff; /* Label color */
+}
+
+form .data input, select {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid silver;
+  background: rgba(255, 255, 255, 0.1); /* Input field background */
+  color: #fff; /* Input text color */
+  border-radius: 5px;
+}
+
+form .data input:focus {
+  border-color: #3498db;
+  border-bottom-width: 2px;
+}
+
+form .forgot-pass {
+  margin-top: -8px;
+}
+
+form .forgot-pass a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+form .btn, .btnn button {
+  text-decoration: underline;
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: -webkit-linear-gradient(to right, #1A3636 50%, #677D6A 50%);
+}
+
+form .btn .inner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(right, #1A3636, #1A3636, #677D6A, #D6BD98);
+  transition: all 0.4s;
+}
+
+form .btn:hover .inner {
+  /* left: 0; */
+}
+
+form .btn button, .btnn {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-left: 10%;
+  font-size: 16px;
+}
+
+.container2 .btn {
+  transform: translateY(-20px);
+}
+
+.btnn button {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  background: -webkit-linear-gradient(right, #1A3636, #1A3636, #677D6A, #D6BD98);
+  outline: none;
+  border: none;
+  color: white;
+}
+
+/* Loading animation */
+.loading {
+  --speed-of-animation: 0.9s;
+  --gap: 6px;
+  --first-color: #4c86f9;
+  --second-color: #49a84c;
+  --third-color: #f6bb02;
+  --fourth-color: #f6bb02;
+  --fifth-color: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  gap: 6px;
+  height: 100px;
+}
+
+.loading span {
+  width: 4px;
+  height: 50px;
+  background: var(--first-color);
+  animation: scale var(--speed-of-animation) ease-in-out 1;
+}
+
+.loading span:nth-child(2) {
+  background: var(--second-color);
+  animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+  background: var(--third-color);
+  animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+  background: var(--fourth-color);
+  animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+  background: var(--fifth-color);
+  animation-delay: -0.5s;
+}
+
+@keyframes scale {
+  0%, 40%, 100% {
+    transform: scaleY(0.05);
+  }
+
+  20% {
+    transform: scaleY(1);
+  }
+}
+
+.buton {
+  transform: translateY(2rem);
+}
